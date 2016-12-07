@@ -1,0 +1,33 @@
+{
+  "name": "chrome translate",
+  "description": " ",
+  "version": "0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "jquery-1.10.2.min.js",
+        "core.js",
+        "frontend.js"
+      ]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "icon.jpg",
+    "128": "icon.jpg"
+  }
+}
